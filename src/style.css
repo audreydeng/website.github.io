@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap");
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #777777;
+  --line: #e6e6e6;
+  --serif: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+*, *::before, *::after {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+/* PT Mono for the site title and bold section headers (beats the Roboto rule above) */
+.site-title,
+h4,
+.label {
+  font-family: "PT Mono", "Courier New", monospace !important;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  padding: 56px 4vw 48px;
+}
+
+.site-title {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.site-nav { display: flex; gap: 28px; }
+
+.site-nav a {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--muted);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover { color: var(--text); }
+.site-nav a.active { color: var(--text); border-bottom-color: var(--text); }
+
+/* Page container */
+.page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 4vw 96px;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: auto 600px;
+  justify-content: center;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-photo { width: auto; max-width: none; height: auto; display: block; }
+.about-text p { margin: 0 0 1.1em; }
+.about-text a { text-underline-offset: 3px; }
+.about-text .label { font-weight: bold; margin-bottom: 0.4em; }
+
+/* Writing */
+.writing { max-width: 720px; margin: 0 auto; }
+
+.writing h4 {
+  font-size: 1.3rem;
+  margin: 0 0 1em;
+}
+
+/* Space between the end of one section's list and the next heading */
+.writing .writing-section + .writing-section { margin-top: 3.2em; }
+
+.writing ul { list-style: none; margin: 0; padding: 0; }
+.writing li { margin-bottom: 0.9em; }
+.writing a { text-underline-offset: 3px; }
+.writing a:hover { color: var(--muted); }
+
+/* Illustration */
+.illustration { max-width: 1000px; margin: 0 auto; }
+.illustration .project {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+.illustration .project-image { display: block; }
+.illustration .project img { width: 100%; height: auto; display: block; }
+.illustration .project-text h4 { font-size: 1.3rem; margin: 0 0 0.8em; }
+.illustration .project-text p { margin: 0 0 1em; }
+.illustration .project-text a { text-underline-offset: 3px; }
+.illustration .label { font-weight: bold; margin-bottom: 0.3em; }
+
+.illustration .button {
+  display: inline-block;
+  margin-top: 0.6em;
+  padding: 10px 22px;
+  border: 1px solid var(--text);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.illustration .button:hover { background: var(--text); color: var(--bg); }
+
+.illustration .grid {
+  columns: 3 240px;
+  column-gap: 24px;
+}
+.illustration figure { margin: 0 0 24px; break-inside: avoid; }
+.illustration .grid img { width: 100%; height: auto; display: block; }
+
+/* Mobile */
+@media (max-width: 720px) {
+  body { font-size: 17px; }
+  .site-header { padding: 36px 5vw 28px; }
+  .site-nav { gap: 20px; }
+  .illustration .project { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+}
+
+/* Stack photo above text when there isn't room for them side by side */
+@media (max-width: 1180px) {
+  .about { grid-template-columns: minmax(0, 1fr); gap: 28px; justify-content: stretch; }
+  .about-photo { width: 100% !important; max-width: 480px; height: auto !important; opacity: 1 !important; }
+}
