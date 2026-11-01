@@ -1,4 +1,5 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
+import CV from "../../Assets/Deng_CV.pdf";
 
 const PHOTO =
   "https://images.squarespace-cdn.com/content/v1/6ac66f425a10514943362cdf/01607f7c-f6d6-4437-aed8-69d82fbd4d17/B5F43872-8FB5-49C7-9526-89546E0C7947_1_102_a.jpeg";
@@ -65,16 +66,21 @@ function About() {
       <div className="about-text" ref={textRef}>
         <p>I am a Texas-born writer and illustrator based in New York.</p>
         <p>
-          My writing and drawings have appeared in <em>Columbia Journal</em>,{" "}
-          <em>Publishers Weekly</em>, <em>Recliner Magazine</em>,{" "}
-          <em>Mr. Beller’s Neighborhood</em>, the American Academy of Poets,{" "}
-          <em>Almanaq</em>, <em>The Rational Creature</em>, Seed the Vote, and
-          elsewhere. Alongside my creative work, I also manage projects, edit,
-          ghostwrite, and conduct research.
+          I received my MFA in Nonfiction Writing from Columbia University.
         </p>
         <p>
-          I received my MFA in Nonfiction Writing from Columbia University and
-          my BA in Comparative Literature from NYU.
+          My writing and drawings have appeared in <em>Columbia Journal</em>,{" "}
+          <em>Publishers Weekly</em>, <em>Recliner Magazine</em>,{" "}
+          <em>Mr. Beller’s Neighborhood</em>, <em>fields</em> magazine, the
+          American Academy of Poets, <em>Almanaq</em>, <em>The Rational
+          Creature</em>, Seed the Vote, and elsewhere.
+        </p>
+        <p>
+          Alongside my creative work, I also provide services as a project
+          manager, editor, ghostwriter, and researcher.
+        </p>
+        <p>
+          <a href={CV} target="_blank" rel="noreferrer">CV</a>
         </p>
         <p>
           Email: <a href="mailto:audreydeng@gmail.com">audreydeng@gmail.com</a>
