@@ -76,30 +76,38 @@ function About() {
           Creature</em>, Seed the Vote, and elsewhere.
         </p>
         <p>
-          Alongside my creative work, I also provide services as a project
-          manager, editor, ghostwriter, and researcher.
+          Alongside my creative work, I am also available as an editor, fact
+          checker, sensitivity reader, and project manager for books,
+          articles, and other editorial projects.
         </p>
-        <p>
-          <a href={CV} target="_blank" rel="noreferrer">CV</a>
-        </p>
-        <p>
-          Email: <a href="mailto:audreydeng@gmail.com">audreydeng@gmail.com</a>
-        </p>
-        <p>
-          Instagram:{" "}
-          <a href="https://www.instagram.com/audrey_storagesolutions" target="_blank" rel="noreferrer">
-            @audrey_storagesolutions
-          </a>
-        </p>
-        <p>
-          Substack:{" "}
-          <a href="https://substack.com/@blogdrey" target="_blank" rel="noreferrer">
-            @blogdrey
-          </a>
-        </p>
+
         <p className="label">Selected Awards:</p>
         <p>Tofte Lake Center Emerging Artist Fellowship, 2025</p>
         <p>Periplus Nonfiction Prize finalist</p>
+
+        <div className="contact-block">
+          <p className="label">Contact Me</p>
+          <p>
+            <a className="button-link" href={CV} target="_blank" rel="noreferrer">
+              CV
+            </a>
+          </p>
+          <p>
+            Email: <a href="mailto:audreydeng@gmail.com">audreydeng@gmail.com</a>
+          </p>
+          <p>
+            Instagram:{" "}
+            <a href="https://www.instagram.com/audrey_storagesolutions" target="_blank" rel="noreferrer">
+              @audrey_storagesolutions
+            </a>
+          </p>
+          <p>
+            Substack:{" "}
+            <a href="https://substack.com/@blogdrey" target="_blank" rel="noreferrer">
+              @blogdrey
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );
