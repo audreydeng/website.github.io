@@ -30,11 +30,11 @@ body {
 
 a { color: inherit; }
 
-/* PT Mono for the site title and bold section headers (beats the Roboto rule above) */
+/* Typography */
 .site-title,
-h4,
-.label {
-  font-family: "PT Mono", "Courier New", monospace !important;
+.label,
+h4 {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
 }
 
 /* Header */
@@ -54,7 +54,11 @@ h4,
   text-decoration: none;
 }
 
-.site-nav { display: flex; gap: 28px; }
+.site-nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
 
 .site-nav a {
   font-family: var(--sans);
@@ -63,10 +67,14 @@ h4,
   color: var(--muted);
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
 }
 
 .site-nav a:hover { color: var(--text); }
 .site-nav a.active { color: var(--text); border-bottom-color: var(--text); }
+
 
 /* Page container */
 .page {

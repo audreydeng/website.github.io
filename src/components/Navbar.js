@@ -12,7 +12,9 @@ function NavBar() {
         <NavLink to="/" end>About</NavLink>
         <NavLink to="/writing">Writing</NavLink>
         <NavLink to="/illustration">Illustration</NavLink>
-        <a href={CV} target="_blank" rel="noreferrer">CV</a>
+        <a href={CV} target="_blank" rel="noreferrer">
+          Download CV
+        </a>
       </nav>
     </header>
   );
