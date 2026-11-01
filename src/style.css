@@ -88,9 +88,31 @@ h4,
 .about-text p { margin: 0 0 1.1em; }
 .about-text a { text-underline-offset: 3px; }
 .about-text .label { font-weight: bold; margin-bottom: 0.4em; }
+.contact-block { margin-top: 2.2em; }
+.button-link {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid var(--text);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+.button-link:hover { background: var(--text); color: var(--bg); }
 
 /* Writing */
-.writing { max-width: 720px; margin: 0 auto; }
+.writing {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 3.5rem;
+  align-items: start;
+}
+
+.writing-section {
+  min-width: 0;
+}
 
 .writing h4 {
   font-size: 1.3rem;
@@ -98,12 +120,20 @@ h4,
 }
 
 /* Space between the end of one section's list and the next heading */
-.writing .writing-section + .writing-section { margin-top: 3.2em; }
+.writing .writing-section + .writing-section { margin-top: 0; }
 
 .writing ul { list-style: none; margin: 0; padding: 0; }
 .writing li { margin-bottom: 0.9em; }
 .writing a { text-underline-offset: 3px; }
 .writing a:hover { color: var(--muted); }
+
+@media (max-width: 900px) {
+  .writing {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    max-width: 720px;
+  }
+}
 
 /* Illustration */
 .illustration { max-width: 1000px; margin: 0 auto; }
