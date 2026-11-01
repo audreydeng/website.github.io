@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import CV from "../Assets/Deng_CV.pdf";
 
 function NavBar() {
   return (
@@ -11,6 +12,7 @@ function NavBar() {
         <NavLink to="/" end>About</NavLink>
         <NavLink to="/writing">Writing</NavLink>
         <NavLink to="/illustration">Illustration</NavLink>
+        <a href={CV} target="_blank" rel="noreferrer">CV</a>
       </nav>
     </header>
   );

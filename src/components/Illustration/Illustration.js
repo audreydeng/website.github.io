@@ -49,6 +49,8 @@ function Illustration() {
               Domino Books
             </a>
           </p>
+          <p className="label">Recognition:</p>
+          <p>Tofte Lake Center Emerging Artist Fellowship, 2025</p>
           <a
             className="button"
             href="https://dominobooks.org/mylifeisanti.html"
