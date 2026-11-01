@@ -88,11 +88,6 @@ function About() {
         <div className="contact-block">
           <p className="label">Contact Me</p>
           <p>
-            <a className="button-link" href={CV} target="_blank" rel="noreferrer">
-              CV
-            </a>
-          </p>
-          <p>
             Email: <a href="mailto:audreydeng@gmail.com">audreydeng@gmail.com</a>
           </p>
           <p>
@@ -105,6 +100,11 @@ function About() {
             Substack:{" "}
             <a href="https://substack.com/@blogdrey" target="_blank" rel="noreferrer">
               @blogdrey
+            </a>
+          </p>
+          <p>
+            <a className="button-link" href={CV} target="_blank" rel="noreferrer">
+              Download CV
             </a>
           </p>
         </div>
